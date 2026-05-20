@@ -2,137 +2,98 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>In Development</title>
-
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
-    }
-
-    body {
-      height: 100vh;
-      overflow: hidden;
-      color: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: linear-gradient(-45deg, #0a001f, #1a0033, #2d0066, #120024);
-      background-size: 400% 400%;
-      animation: gradientMove 12s ease infinite;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    /* Glow container */
-    .container {
-      text-align: center;
-      z-index: 2;
-    }
-
-    /* Glitch text */
-    .glitch {
-      font-size: 3rem;
-      font-weight: bold;
-      position: relative;
-      color: #fff;
-      text-shadow: 0 0 10px #a855f7, 0 0 20px #9333ea;
-      animation: flicker 2s infinite;
-    }
-
-    @keyframes flicker {
-      0%, 100% { opacity: 1; }
-      50% { opacity: 0.85; }
-      55% { opacity: 0.4; }
-      60% { opacity: 1; }
-    }
-
-    .sub {
-      margin-top: 15px;
-      font-size: 1.2rem;
-      opacity: 0.8;
-      letter-spacing: 1px;
-    }
-
-    /* Neon line */
-    .line {
-      margin: 25px auto;
-      width: 120px;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, #a855f7, transparent);
-      animation: pulse 2s infinite;
-    }
-
-    @keyframes pulse {
-      0% { opacity: 0.3; transform: scaleX(0.5); }
-      50% { opacity: 1; transform: scaleX(1); }
-      100% { opacity: 0.3; transform: scaleX(0.5); }
-    }
-
-    /* Floating particles */
-    .particle {
-      position: absolute;
-      border-radius: 50%;
-      background: rgba(168, 85, 247, 0.5);
-      animation: float linear infinite;
-    }
-
-    @keyframes float {
-      from {
-        transform: translateY(100vh) scale(0.5);
-        opacity: 0;
-      }
-      to {
-        transform: translateY(-10vh) scale(1);
-        opacity: 1;
-      }
-    }
-
-    /* Footer */
-    .footer {
-      position: absolute;
-      bottom: 20px;
-      font-size: 0.8rem;
-      opacity: 0.6;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VertaWorld — Your World of Opportunities</title>
+  <meta name="description" content="VertaWorld is a modern global business platform." />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="logo">VertaWorld</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#vision">Vision</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-  <div class="container">
-    <div class="glitch">IN DEVELOPMENT</div>
-    <div class="line"></div>
-    <div class="sub">Something cool is loading...</div>
-  </div>
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Global Business Platform</p>
+      <h1>Your World of Opportunities</h1>
+      <p class="subtitle">
+        Building trusted solutions and connecting ideas across borders.
+      </p>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </div>
+  </section>
 
-  <div class="footer">.space — coming soon</div>
+  <section class="stats">
+    <div class="container stats-grid">
+      <div><strong>Global</strong><span>Vision</span></div>
+      <div><strong>Trusted</strong><span>Brand</span></div>
+      <div><strong>Modern</strong><span>Solutions</span></div>
+    </div>
+  </section>
 
-  <script>
-    // Create floating particles
-    const count = 40;
+  <section id="about" class="section">
+    <div class="container">
+      <h2>About VertaWorld</h2>
+      <p>
+        VertaWorld is designed to become a professional and reliable brand with a
+        global perspective. Our mission is to create opportunities, deliver value,
+        and build long-term trust.
+      </p>
+    </div>
+  </section>
 
-    for (let i = 0; i < count; i++) {
-      const p = document.createElement("div");
-      p.classList.add("particle");
+  <section id="services" class="section alt">
+    <div class="container">
+      <h2>What We Do</h2>
+      <div class="cards">
+        <div class="card">
+          <h3>Business Solutions</h3>
+          <p>Helping ideas become scalable businesses.</p>
+        </div>
+        <div class="card">
+          <h3>Global Reach</h3>
+          <p>Connecting opportunities across markets and industries.</p>
+        </div>
+        <div class="card">
+          <h3>Innovation</h3>
+          <p>Building modern and future-ready digital experiences.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      const size = Math.random() * 4 + 2;
-      p.style.width = size + "px";
-      p.style.height = size + "px";
+  <section id="vision" class="section">
+    <div class="container">
+      <h2>Our Vision</h2>
+      <p>
+        To create a respected international brand known for credibility,
+        innovation, and meaningful impact.
+      </p>
+    </div>
+  </section>
 
-      p.style.left = Math.random() * 100 + "vw";
-      p.style.animationDuration = (Math.random() * 10 + 5) + "s";
-      p.style.animationDelay = Math.random() * 5 + "s";
+  <section id="contact" class="section alt">
+    <div class="container">
+      <h2>Contact</h2>
+      <p>Ready to collaborate? Let's build something exceptional.</p>
+      <a href="mailto:hello@vertaworld.space" class="btn">hello@vertaworld.space</a>
+    </div>
+  </section>
 
-      document.body.appendChild(p);
-    }
-  </script>
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> VertaWorld. All rights reserved.</p>
+    </div>
+  </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>

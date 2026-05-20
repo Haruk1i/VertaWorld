@@ -1,0 +1,63 @@
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;
+  line-height:1.6;
+  color:#f5f5ff;
+  background:
+    radial-gradient(circle at top right, rgba(153,69,255,.25), transparent 40%),
+    linear-gradient(135deg, #120022, #22003f 45%, #32005d);
+}
+.container{width:min(1100px, calc(100% - 2rem)); margin:0 auto}
+.navbar{
+  position:sticky; top:0; z-index:10;
+  backdrop-filter: blur(10px);
+  background:rgba(10,0,20,.45);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.nav-inner{display:flex;justify-content:space-between;align-items:center;padding:1rem 0}
+.logo{font-weight:800;font-size:1.25rem;letter-spacing:.04em}
+nav a{color:#ddd;text-decoration:none;margin-left:1rem}
+nav a:hover{color:#fff}
+.hero{padding:8rem 0 6rem;text-align:center}
+.eyebrow{letter-spacing:.2em;text-transform:uppercase;color:#caa7ff;font-size:.8rem}
+h1{
+  font-size:clamp(2.8rem, 8vw, 6rem);
+  line-height:1;
+  margin:.5rem 0 1rem;
+  text-shadow:0 0 24px rgba(203, 150, 255, .6);
+}
+.subtitle{max-width:700px;margin:0 auto 2rem;color:#ddd;font-size:1.15rem}
+.btn{
+  display:inline-block;padding:.9rem 1.6rem;border-radius:999px;
+  background:linear-gradient(90deg,#9f5fff,#d98cff);
+  color:#120022;text-decoration:none;font-weight:700;
+  box-shadow:0 10px 30px rgba(159,95,255,.35);
+}
+.stats{padding:0 0 2rem}
+.stats-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;
+}
+.stats-grid div,.card{
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:24px;
+  padding:1.5rem;
+  backdrop-filter:blur(10px);
+}
+.stats-grid strong{display:block;font-size:1.4rem}
+.stats-grid span{color:#cfc7e8}
+.section{padding:5rem 0}
+.section.alt{background:rgba(255,255,255,.03)}
+h2{font-size:2.2rem;margin-top:0}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.card h3{margin-top:0}
+.footer{
+  padding:2rem 0;text-align:center;color:#cfc7e8;
+  border-top:1px solid rgba(255,255,255,.08)
+}
+@media (max-width:768px){
+  nav{display:none}
+  .stats-grid,.cards{grid-template-columns:1fr}
+  .hero{padding:6rem 0 4rem}
+}

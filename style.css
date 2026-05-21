@@ -10,21 +10,98 @@ h1, h2, h3, .tracking-widest {
 
 /* Luxury Card Glow Effect */
 .group:hover {
-    box-shadow: 0 10px 40px -10px rgba(245, 158, 11, 0.15);
-    border-color: rgba(245, 158, 11, 0.4) !important;
+    box-shadow: 0 10px 40px -10px rgba(245, 158, 11, 0.2);
+    border-color: rgba(245, 158, 11, 0.5) !important;
 }
 
-/* Custom Scrollbar */
+/* Custom Luxury Scrollbar */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 6px;
 }
 ::-webkit-scrollbar-track {
     background: #0c0a09;
 }
 ::-webkit-scrollbar-thumb {
-    background: #78716c;
+    background: #44403c;
     border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
     background: #f59e0b;
+}
+
+/* --- INFINITE AUTO SLIDER CSS --- */
+.logo-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 10px 0;
+    display: flex;
+}
+
+.logo-slider::before, .logo-slider::after {
+    background: linear-gradient(to right, #0c0a09 0%, transparent 100%);
+    content: "";
+    height: 100%;
+    position: absolute;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.logo-slider::before {
+    left: 0;
+    top: 0;
+}
+
+.logo-slider::after {
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+.logo-slide-track {
+    display: flex;
+    width: calc(250px * 16);
+    animation: scroll 30s linear infinite;
+}
+
+.logo-slide-track:hover {
+    animation-play-state: paused; /* Сул зогсоход түр зогсоно (VIP эффект) */
+}
+
+.slide {
+    width: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    white-space: nowrap;
+    padding: 0 20px;
+    filter: drop-shadow(0 2px 5px rgba(0,0,0,0.5));
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-250px * 8));
+    }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+    .logo-slider::before, .logo-slider::after {
+        width: 50px;
+    }
+    .slide {
+        width: 190px;
+        font-size: 11px;
+    }
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-190px * 8)); }
+    }
 }

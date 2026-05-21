@@ -1,137 +1,251 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VertaWorld | Your World of Opportunities</title>
-  <meta name="description" content="VertaWorld - Global Business Platform" />
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VertaWorld | Premium Event Concierge by Sekai INC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .gold-gradient {
+            background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+        }
+        .text-gold-gradient {
+            background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #b45309 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-stone-950 text-stone-100 font-sans antialiased">
 
-  <!-- Navigation -->
-  <header class="navbar">
-    <div class="container nav-inner">
-      <a href="#" class="brand">
-        <img src="vertalogo.png" alt="VertaWorld Logo" class="logo-img">
-        <span>VertaWorld</span>
-      </a>
+    <header class="fixed w-full z-50 bg-stone-950/90 backdrop-blur-md border-b border-stone-900">
+        <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="logo.png" alt="VertaWorld Logo" class="h-10 w-auto object-contain onerror='this.style.display=\"none\"'">
+                <span class="text-2xl font-black tracking-widest text-gold-gradient">VERTAWORLD</span>
+            </a>
+            
+            <nav class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-semibold text-stone-400">
+                <a href="#about" class="hover:text-amber-500 transition-colors">The Concierge</a>
+                <a href="#featured" class="hover:text-amber-500 transition-colors">VIP Access</a>
+                <a href="#request" class="hover:text-amber-500 transition-colors">Custom Request</a>
+                <a href="#faq" class="hover:text-amber-500 transition-colors">F.A.Q.</a>
+            </nav>
 
-      <nav class="nav-links">
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#vision">Vision</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="dev-badge">🚧 In Development</div>
-    </div>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-content">
-      <p class="eyebrow">Global Business Platform</p>
-      <h1>Your World of Opportunities</h1>
-      <p class="subtitle">
-        Building a trusted international brand with innovation, credibility,
-        and limitless vision.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#contact" class="btn primary">Get Started</a>
-        <a href="#about" class="btn secondary">Learn More</a>
-      </div>
-
-      <div class="hero-dev">
-        🚧 Website Currently Under Development
-      </div>
-    </div>
-  </section>
-
-  <!-- Stats -->
-  <section class="stats">
-    <div class="container stats-grid">
-      <div class="stat-card">
-        <h3>Global</h3>
-        <p>Vision</p>
-      </div>
-      <div class="stat-card">
-        <h3>Trusted</h3>
-        <p>Brand</p>
-      </div>
-      <div class="stat-card">
-        <h3>Innovative</h3>
-        <p>Solutions</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="section reveal">
-    <div class="container">
-      <h2>About VertaWorld</h2>
-      <p>
-        VertaWorld is designed to become a respected global business platform,
-        delivering opportunities and building long-term trust worldwide.
-      </p>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services" class="section alt reveal">
-    <div class="container">
-      <h2>What We Do</h2>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Business Solutions</h3>
-          <p>Transforming ideas into scalable and sustainable businesses.</p>
+            <a href="#request" class="gold-gradient text-stone-950 px-7 py-3 rounded-full text-xs font-black uppercase tracking-widest transition-transform hover:scale-105 duration-300">
+                Request VIP Seats
+            </a>
         </div>
+    </header>
 
-        <div class="card">
-          <h3>Global Reach</h3>
-          <p>Connecting markets, industries, and opportunities worldwide.</p>
+    <section class="relative min-h-screen flex items-center justify-center pt-24 px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(217,119,6,0.1)_0,transparent_55%)]"></div>
+        <div class="max-w-5xl text-center relative z-10">
+            <span class="text-amber-500 text-xs font-black uppercase tracking-widest border border-amber-500/30 px-5 py-2 rounded-full bg-amber-500/5">
+                A Subsidiary of Sekai INC
+            </span>
+            <h1 class="text-5xl md:text-7xl font-black uppercase tracking-tight mt-8 mb-8 leading-[1.15]">
+                Secure the Unattainable. <br>Experience Live Legends.
+            </h1>
+            <p class="text-stone-400 md:text-xl max-w-3xl mx-auto mb-12 font-light leading-relaxed">
+                VertaWorld is a premium boutique event brokerage. We curate, verify, and source exclusive, premium, and sold-out VIP access for iconic music tours, festivals, and global sports events across the United States.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-5">
+                <a href="#request" class="w-full sm:w-auto gold-gradient text-stone-950 px-10 py-5 rounded-full font-bold uppercase tracking-wider text-sm transition-transform hover:scale-105 shadow-xl shadow-amber-500/10">
+                    Consult Our Concierge
+                </a>
+                <a href="#featured" class="w-full sm:w-auto border border-stone-800 hover:border-stone-600 bg-stone-900/20 px-10 py-5 rounded-full font-bold uppercase tracking-wider text-sm transition-all">
+                    Browse Live Inventory
+                </a>
+            </div>
         </div>
+    </section>
 
-        <div class="card">
-          <h3>Innovation</h3>
-          <p>Building modern digital experiences for the future.</p>
+    <section class="py-10 border-t border-b border-stone-900 bg-stone-900/10">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <p class="text-xs font-semibold tracking-widest text-stone-500 uppercase mb-4">Official Verification & Secure Transfer Networks</p>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-30 text-lg font-bold tracking-wider text-stone-400">
+                <div><i class="fa-solid fa-ticket mr-2"></i> TICKETMASTER®</div>
+                <div><i class="fa-solid fa-clone mr-2"></i> STUBHUB®</div>
+                <div><i class="fa-solid fa-bolt mr-2"></i> SEATGEEK®</div>
+                <div><i class="fa-solid fa-shield mr-2"></i> LIVE NATION®</div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Vision -->
-  <section id="vision" class="section reveal">
-    <div class="container">
-      <h2>Our Vision</h2>
-      <p>
-        To establish a globally recognized brand known for credibility,
-        excellence, and meaningful impact.
-      </p>
-    </div>
-  </section>
+    <section id="about" class="py-32">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-xs font-black uppercase tracking-widest text-amber-500 mb-4">The VertaWorld Standard</h2>
+                    <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight mb-8">White-Glove Brokerage For Discerning Fans</h3>
+                    <p class="text-stone-400 leading-relaxed mb-6 font-light">
+                        Skip the automated bidding wars and frustrating digital queues. At VertaWorld, we believe premium entertainment deserves premium acquisition. Engineered and powered by **Sekai INC**, our specialized global asset-sourcing system secures pristine seating.
+                    </p>
+                    <p class="text-stone-400 leading-relaxed font-light">
+                        Whether it's historic classic rock revivals, high-demand hip-hop festivals, or front-row court seats, we handle full verification and safe wallet-to-wallet transfer.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="p-8 bg-stone-900/30 border border-stone-900 rounded-3xl">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl mb-6"><i class="fa-solid fa-user-check"></i></div>
+                        <h4 class="font-bold uppercase tracking-wider text-sm mb-2">Personal Broker</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">No bots. A dedicated professional manages your ticket acquisition manually.</p>
+                    </div>
+                    <div class="p-8 bg-stone-900/30 border border-stone-900 rounded-3xl">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/10 flex items-center justify-center text-amber-500 text-xl mb-6"><i class="fa-solid fa-lock"></i></div>
+                        <h4 class="font-bold uppercase tracking-wider text-sm mb-2">Guaranteed Delivery</h4>
+                        <p class="text-xs text-stone-500 leading-relaxed">100% official ticket sync transferred securely straight to your primary email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <!-- Contact -->
-  <section id="contact" class="section alt reveal">
-    <div class="container">
-      <h2>Contact</h2>
-      <p>Ready to build something exceptional together?</p>
-      <a href="mailto:hello@vertaworld.space" class="btn primary">
-        hello@vertaworld.space
-      </a>
-    </div>
-  </section>
+    <section id="featured" class="py-32 bg-stone-900/10 border-t border-stone-900">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <h2 class="text-xs font-black uppercase tracking-widest text-amber-500 mb-4">Live Portfolio</h2>
+                <h3 class="text-3xl md:text-4xl font-black uppercase tracking-tight">Currently Sourced Premium Passes</h3>
+                <p class="text-sm text-stone-500 mt-4">Direct checkout via encrypted checkout links. Apple Pay and all global credit cards accepted.</p>
+            </div>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <p>© <span id="year"></span> VertaWorld. All rights reserved.</p>
-      <p class="footer-dev">🚧 Website Under Development</p>
-    </div>
-  </footer>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-stone-900/40 border border-stone-900 rounded-3xl overflow-hidden group hover:border-stone-800 transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 px-3 py-1 rounded-md">Music Festival</span>
+                            <span class="text-xl font-black text-amber-500">$250</span>
+                        </div>
+                        <h4 class="text-xl font-bold uppercase tracking-wide mb-2">Rolling Loud Miami</h4>
+                        <p class="text-xs text-stone-500 mb-6"><i class="fa-solid fa-location-dot mr-1.5"></i> Hard Rock Stadium, FL</p>
+                        <ul class="text-xs text-stone-400 space-y-3 border-t border-stone-900 pt-6 mb-8">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> 3-Day General Admission Pass</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Official App Ticket Transfer</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> 100% Authenticity Handshake</li>
+                        </ul>
+                        <a href="#" class="block text-center w-full bg-stone-900 hover:bg-amber-500 hover:text-stone-950 border border-stone-800 hover:border-transparent text-stone-300 font-bold text-xs uppercase tracking-widest py-4 rounded-xl transition-all duration-300">
+                            Purchase Instant Ticket
+                        </a>
+                    </div>
+                </div>
 
-  <script src="script.js"></script>
+                <div class="bg-stone-900/40 border border-amber-500/30 rounded-3xl overflow-hidden relative group shadow-2xl shadow-amber-500/5">
+                    <div class="absolute top-0 right-0 bg-amber-500 text-stone-950 text-[9px] font-black uppercase tracking-widest px-4 py-1 rounded-bl-xl">Most Requested</div>
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-widest bg-amber-500/20 text-amber-400 px-3 py-1 rounded-md">Stadium Tour</span>
+                            <span class="text-xl font-black text-amber-500">$395</span>
+                        </div>
+                        <h4 class="text-xl font-bold uppercase tracking-wide mb-2">Michael Jackson Tribute</h4>
+                        <p class="text-xs text-stone-500 mb-6"><i class="fa-solid fa-location-dot mr-1.5"></i> Madison Square Garden, NY</p>
+                        <ul class="text-xs text-stone-400 space-y-3 border-t border-stone-800 pt-6 mb-8">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Premium Lower Tier Level Seating</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> VIP Entrance Fast-Track</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Instant Wallet Synchronization</li>
+                        </ul>
+                        <a href="#" class="block text-center w-full gold-gradient text-stone-950 font-bold text-xs uppercase tracking-widest py-4 rounded-xl transition-transform hover:scale-[1.02]">
+                            Purchase Instant Ticket
+                        </a>
+                    </div>
+                </div>
+
+                <div class="bg-stone-900/40 border border-stone-900 rounded-3xl overflow-hidden group hover:border-stone-800 transition-all duration-300">
+                    <div class="p-8">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="text-[10px] font-black uppercase tracking-widest bg-amber-500/10 text-amber-400 px-3 py-1 rounded-md">Rock Concert</span>
+                            <span class="text-xl font-black text-amber-500">$180</span>
+                        </div>
+                        <h4 class="text-xl font-bold uppercase tracking-wide mb-2">Iconic Legends Stadium Show</h4>
+                        <p class="text-xs text-stone-500 mb-6"><i class="fa-solid fa-location-dot mr-1.5"></i> Los Angeles, CA</p>
+                        <ul class="text-xs text-stone-400 space-y-3 border-t border-stone-900 pt-6 mb-8">
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Reserved Field Seating Available</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Verified Safe Ticket Transfer</li>
+                            <li><i class="fa-solid fa-check text-amber-500 mr-2"></i> Dedicated Event Day Support</li>
+                        </ul>
+                        <a href="#" class="block text-center w-full bg-stone-900 hover:bg-amber-500 hover:text-stone-950 border border-stone-800 hover:border-transparent text-stone-300 font-bold text-xs uppercase tracking-widest py-4 rounded-xl transition-all duration-300">
+                            Purchase Instant Ticket
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="request" class="py-32 border-t border-stone-900">
+        <div class="max-w-2xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-xs font-black uppercase tracking-widest text-amber-500 mb-4">Bespoke Sourcing</h2>
+                <h3 class="text-3xl font-black uppercase tracking-tight mb-4">Submit A Custom Acquisition Request</h3>
+                <p class="text-sm text-stone-500">Can't find your specific event? Let our elite concierge desk find it for you. Secure quotes delivered directly to your inbox within 12 hours.</p>
+            </div>
+
+            <form action="https://formspree.io/f/YOUR_FORMSPREEE_ID" method="POST" class="space-y-6 bg-stone-900/30 border border-stone-900 p-10 rounded-3xl">
+                <input type="hidden" name="_replyto" value="sekaiofficiall@gmail.com">
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">Your Full Name</label>
+                        <input type="text" name="Client Name" required class="w-full bg-stone-950 border border-stone-900 rounded-xl px-4 py-4 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">Email Address</label>
+                        <input type="email" name="Client Email" required class="w-full bg-stone-950 border border-stone-900 rounded-xl px-4 py-4 text-stone-100 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">Event Title, Artist, & Location</label>
+                    <input type="text" name="Requested Event Details" placeholder="e.g., Rolling Loud Miami 2026, Section 102" required class="w-full bg-stone-950 border border-stone-900 rounded-xl px-4 py-4 text-stone-100 placeholder-stone-700 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                </div>
+
+                <div>
+                    <label class="block text-[10px] uppercase tracking-widest font-bold text-stone-400 mb-2">Desired Tier / Experience Package</label>
+                    <select name="Tier Level Preference" class="w-full bg-stone-950 border border-stone-900 rounded-xl px-4 py-4 text-stone-400 focus:outline-none focus:border-amber-500 transition-colors text-sm">
+                        <option value="Standard Premium">Standard Verified Premium Tier</option>
+                        <option value="Close to Stage">Front Section / Closest to Stage</option>
+                        <option value="Elite VIP Package">Exclusive VIP Hospitality Lounge Package</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="w-full gold-gradient text-stone-950 font-black text-xs uppercase tracking-widest py-4.5 rounded-xl transition-all duration-300 transform hover:scale-[1.01] shadow-lg shadow-amber-500/10">
+                    Initiate Procurement Search
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section id="faq" class="py-32 border-t border-stone-900 bg-stone-900/10">
+        <div class="max-w-3xl mx-auto px-6">
+            <h2 class="text-xs font-black uppercase tracking-widest text-amber-500 text-center mb-4">Operations & Safety</h2>
+            <h3 class="text-3xl font-black uppercase tracking-tight text-center mb-20">Frequently Answered Protocols</h3>
+            
+            <div class="space-y-6">
+                <div class="p-8 bg-stone-900/20 border border-stone-900 rounded-2xl">
+                    <h4 class="font-bold text-amber-400 uppercase tracking-wide text-sm mb-2">Are purchases 100% guaranteed?</h4>
+                    <p class="text-xs text-stone-400 leading-relaxed font-light">Absolutely. VertaWorld completely legalizes transfers. All entry tokens are synced and officially transferred to your primary email inbox through elite primary ticket portals (Ticketmaster, StubHub, or SeatGeek).</p>
+                </div>
+                <div class="p-8 bg-stone-900/20 border border-stone-900 rounded-2xl">
+                    <h4 class="font-bold text-amber-400 uppercase tracking-wide text-sm mb-2">How do payments process securely?</h4>
+                    <p class="text-xs text-stone-400 leading-relaxed font-light">Once our boutique desk closes a deal on your requested seating, we push a premium secure bill link supporting seamless setups for Apple Pay and all secure international banking credit files.</p>
+                </div>
+                <div class="p-8 bg-stone-900/20 border border-stone-900 rounded-2xl">
+                    <h4 class="font-bold text-amber-400 uppercase tracking-wide text-sm mb-2">How do I reach customer concierge directly?</h4>
+                    <p class="text-xs text-stone-400 leading-relaxed font-light">For corporate or immediate logistics questions regarding passes, you can reach our official administration hub at <span class="text-amber-500 font-medium">sekaiofficiall@gmail.com</span>.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-stone-900 bg-stone-950 text-center px-6">
+        <div class="max-w-7xl mx-auto flex flex-col items-center justify-between gap-6 md:flex-row text-[10px] text-stone-600 tracking-widest uppercase font-semibold">
+            <p>&copy; 2026 VERTAWORLD. All Rights Reserved.</p>
+            <p class="text-stone-500">Developed & Powered by <span class="text-stone-400 font-bold">Sekai INC</span></p>
+            <p class="max-w-xs text-left md:text-right normal-case text-stone-700 font-normal tracking-normal">Independent ticket brokerage. Designated trademarks and brands are the property of their respective owners.</p>
+        </div>
+    </footer>
+
 </body>
 </html>

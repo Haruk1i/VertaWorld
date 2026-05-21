@@ -1,14 +1,22 @@
-// FAQ Accordion Toggle Logic
-document.querySelectorAll('#faq h4').forEach(question => {
-    question.style.cursor = 'pointer';
+// FAQ Accordion Toggle Interaction with smooth layout adjustments
+document.querySelectorAll('#faq .cursor-pointer').forEach(question => {
     question.addEventListener('click', () => {
-        const answer = question.nextElementSibling;
+        const answer = question.querySelector('p');
+        const icon = question.querySelector('h4 i');
+        
+        // Toggle answer visibility
         answer.classList.toggle('hidden');
-        answer.classList.toggle('block');
+        
+        // Rotate arrow icon smoothly
+        if (answer.classList.contains('hidden')) {
+            icon.style.transform = 'rotate(0deg)';
+        } else {
+            icon.style.transform = 'rotate(180deg)';
+        }
     });
 });
 
-// Smooth Fade-in on Scroll (Luxury appearance)
+// Smooth Fade-in on Scroll Animation Setup for Luxury Feel
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -16,41 +24,12 @@ const observer = new IntersectionObserver((entries) => {
             entry.target.classList.remove('opacity-0', 'translate-y-10');
         }
     });
-}, { threshold: 0.1 });
+}, { threshold: 0.02 }); // Reduced threshold for better mobile trigger response
 
 document.querySelectorAll('section').forEach((section) => {
-    section.classList.add('transform', 'transition', 'duration-1000', 'opacity-0', 'translate-y-10');
-    observer.observe(section);
-});// Current year in footer
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// Reveal sections on scroll
-const revealElements = document.querySelectorAll(".reveal");
-
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add("active");
-      }
-    });
-  },
-  {
-    threshold: 0.15,
-  }
-);
-
-revealElements.forEach((element) => {
-  observer.observe(element);
-});
-
-// Add subtle shadow when scrolling
-const navbar = document.querySelector(".navbar");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 20) {
-    navbar.style.boxShadow = "0 10px 30px rgba(0, 0, 0, 0.25)";
-  } else {
-    navbar.style.boxShadow = "none";
-  }
+    // Exclude the infinite brand logo strip from fading out completely
+    if(!section.classList.contains('overflow-hidden')) {
+        section.classList.add('transform', 'transition', 'duration-1000', 'opacity-0', 'translate-y-10');
+        observer.observe(section);
+    }
 });

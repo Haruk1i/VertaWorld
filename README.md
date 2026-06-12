@@ -1,12 +1,14 @@
-# VertaWorld Website
+# VertaWorld — Next.js + TypeScript
 
-GitHub Pages-д upload хийх файл.
+## Local test
 
-## Ашиглах заавар
-1. Repository дээрээ эдгээр файлуудыг upload хийнэ.
-2. Settings → Pages → Deploy from branch → main / root сонгоно.
-3. index.html, style.css, script.js, assets folder бүгд root дээр байх ёстой.
+```bash
+pnpm install
+pnpm dev
+```
 
-## Өөрчлөх хэсэг
-- index.html дотор email, Facebook link, pricing, текстээ солино.
-- assets folder дотор logo/banner зураг байгаа.
+Open: http://localhost:3000
+
+## Deploy
+
+Upload this folder to GitHub, then connect the repository to Vercel.
